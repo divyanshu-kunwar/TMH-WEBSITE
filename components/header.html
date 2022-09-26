@@ -1,0 +1,72 @@
+<style>
+.header_navbar{
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: row;
+          height: 50px;
+          justify-content: space-between;
+          position: absolute;
+          width: 100%;
+          font-family: Poppins;
+  }
+  #header_title{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 30px;
+          font-weight: bold;
+  }
+  #header_linksContainer{
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          padding-right: 30px;
+  }
+  .header_link{
+          padding-right: 25px;
+          font-size: medium;
+  }
+  .header_link a{
+          text-decoration: none;
+          color: var(--gray);
+          cursor: pointer;
+          padding: 8px 12px;
+          transition: 0.1s all ease;
+          user-select: none;
+        }
+        
+        .header_link a:hover{
+                background-color: var(--translucent);
+                color: var(--dark2) !important;
+                border-radius: 4px;
+            transition: 0.1s all ease;
+  }
+
+.header_logoContainer{
+        width: 340px;
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        align-items: center;      
+}
+
+.header_logo{
+        width: 30px;
+        height: 30px;
+}
+
+.header_logo img{
+        width: 100%;
+        height: 100%;
+}
+</style>
+<div class="header_navbar">
+  <div class="header_logoContainer">
+    <div class="header_logo">
+      <img src="../media/icon2.jpg" alt="tmhlogo" />
+    </div>
+    <div id="header_title"></div>
+  </div>
+  <div id="header_linksContainer">
+  </div>
+</div>
