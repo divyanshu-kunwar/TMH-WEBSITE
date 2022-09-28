@@ -1,0 +1,64 @@
+<style>
+
+@media only screen and (max-width: 500px) {
+  .strip{
+    flex-direction: column !important;
+    height: 74px !important;
+    padding: 8px 0px !important;
+  }
+}
+
+.strip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    padding: 0px 30px;
+    background-color: var(--dark2);
+    color: var(--light1);
+    font-size: 10px;
+  }
+  
+  .socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--light2);
+    text-decoration: none;
+  }
+
+  .socialImages{
+    max-width: 24px !important;
+    min-width: 24px !important;
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+  
+  .socials:hover .socialImages{
+    filter: brightness(150%);
+  }
+
+  .socials:hover{
+      cursor: pointer;
+      color: var(--light1);
+    }
+    
+.socials span{
+    margin-left: 6px;
+  }
+</style>
+<div class="strip">
+    <div>
+        <a href="https://instagram.com" target="_blank" class="socials">
+            <img class="socialImages" src="../media/instagramicon.svg" alt="Instagram">
+            <span>Instagram</span>
+        </a>
+    </div>
+    <div>
+        Copyright © - Transit Men's Hostel Tezpur Uiversity
+    </div>
+    <div>
+        Design & Developed 2022
+    </div>
+</div>

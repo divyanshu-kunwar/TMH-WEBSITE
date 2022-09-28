@@ -1,72 +1,153 @@
 <style>
-.header_navbar{
-          background-color: #ffffff;
-          display: flex;
-          flex-direction: row;
-          height: 50px;
-          justify-content: space-between;
-          position: absolute;
-          width: 100%;
-          font-family: Poppins;
-  }
-  #header_title{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-left: 30px;
-          font-weight: bold;
-  }
-  #header_linksContainer{
-          align-items: center;
-          display: flex;
-          flex-direction: row;
-          padding-right: 30px;
-  }
-  .header_link{
-          padding-right: 25px;
-          font-size: medium;
-  }
-  .header_link a{
-          text-decoration: none;
-          color: var(--gray);
-          cursor: pointer;
-          padding: 8px 12px;
-          transition: 0.1s all ease;
-          user-select: none;
-        }
-        
-        .header_link a:hover{
-                background-color: var(--translucent);
-                color: var(--dark2) !important;
-                border-radius: 4px;
-            transition: 0.1s all ease;
+  @media only screen and (max-width: 1024px) {
+    .header_navbar{
+      height: 86px !important;
+    }
+    #header_linksContainer{
+      justify-content: center;
+    }
   }
 
-.header_logoContainer{
-        width: 340px;
-        display: flex;
-        flex-direction: row;  
-        justify-content: center;
-        align-items: center;      
-}
+  @media only screen and (max-width: 768px) {    
+    .header_navbar{
+      height: 38px !important;
+    }
+    #header_linksContainer{
+      position: absolute;
+      width: 80%;
+      height: calc(100vh - 168px);
+      margin-top: 37px;
+      flex-direction: column !important;
+      align-items:flex-start !important;
+      padding: 2% 10%;
+      z-index: 2;
+      background-color: var(--white);
+      padding-right: 0px !important;
+    }
+    .show_sidebar{
+      display: inline-flex !important;
+    }
+    .hide_sidebar{
+      display: none !important;
+    }
 
-.header_logo{
-        width: 30px;
-        height: 30px;
-}
+    .header_logoContainer{
+      margin-left: 10%;
+      width: 90% !important;
+    }
 
-.header_logo img{
-        width: 100%;
-        height: 100%;
-}
+    .header_link {
+      display: block !important;
+      margin-top: 6px;
+    }
+    
+    .header_link a{
+      display: block !important;
+      padding: 10px 20px 10px 0px !important;
+    }
+
+    .menu_icon , .close_icon{
+      display: block !important;
+    }
+
+  }
+
+  .header_navbar {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 38px;
+    font-family: Poppins;
+  }
+  #header_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    font-weight: bold;
+  }
+  #header_linksContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-right: 30px;
+    flex-wrap: wrap;
+  }
+  .header_link {
+    padding-top: 8px;
+    padding-right: 25px;
+    font-size: 14px;
+  }
+  .header_link a {
+    text-decoration: none;
+    color: var(--gray);
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.1s all ease;
+    user-select: none;
+  }
+
+  .header_link a:hover {
+    background-color: var(--translucent);
+    color: var(--dark2) !important;
+    transition: 0.1s all ease;
+  }
+
+  .header_logoContainer {
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header_logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header_logo img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .menu_icon{
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .menu_icon img{
+    width: 20px;
+    height: 20px;
+  }
+  .close_icon{
+    position: absolute;
+    height: 45px;
+    right: 8%;
+    top: 4%;
+    cursor: pointer;
+    display: none;
+  }
+
 </style>
+
 <div class="header_navbar">
+  <div class="menu_icon" id="menu_icon" onclick="toggle_sidebar()">
+    <img src="../media/menuIcon.svg" alt="Menu">
+  </div>
   <div class="header_logoContainer">
     <div class="header_logo">
       <img src="../media/icon2.jpg" alt="tmhlogo" />
     </div>
     <div id="header_title"></div>
   </div>
-  <div id="header_linksContainer">
+  <div id="header_linksContainer" class="hide_sidebar">
   </div>
 </div>

@@ -1,0 +1,78 @@
+<style>
+
+@media only screen and (max-width:768px){
+    .LinkInner{
+        flex-wrap: wrap;
+    }   
+}
+
+@media only screen and (max-width:500px){
+    .LinkInner{
+        flex-direction: column !important;
+    }   
+    .linksrows{
+        margin: 10px;
+    }
+}
+
+.importantLinks{
+    width: 100%;
+    background-image: url('../media/tubuilding.png');
+    background-size: cover;
+    font-family: Poppins;
+}
+
+.LinkInner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    backdrop-filter: blur(4px);
+    background-color: var(--translucent2);
+    color: #fff;
+    padding: 30px;
+}
+
+.LinkInner h2{
+    margin-bottom: 20px;
+}
+
+.LinkInner .link{
+    margin-top: 5px;
+    list-style-type: circle;
+}
+
+.link li{
+    opacity: 0.8;
+    list-style: square outside url('../media/bullet.svg');
+}
+
+.link li:hover{
+    opacity: 1;
+    color: var(--white);
+    transform: scale(1.01);
+}
+
+li a{
+    text-decoration: none;
+    color: var(--light1);
+}
+</style>
+
+<div class="importantLinks">
+    <div class="LinkInner">
+        <div class="linksrows" id="DownloadLinks">
+            <h2>Download Links</h2>
+        </div>
+        <div class="linksrows" id="ImportantLinks">
+            <h2>Important Links</h2>
+        </div>
+        <div class="linksrows">
+            <h2>Address</h2>
+            <span >
+                Tezpur University, Napaam, PO: Tezpur<br/>
+                District: Sonitpur, Assam, INDIA<br/>
+                Pincode: 784028
+            </span>
+        </div>
+    </div>    
+</div>

@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../media/Poppin.ttf');
+}
+
 :root{
-    --translucent: #8e8e8e43;
+    --translucent: #8e8e8e22;
+    --translucent2: #3A5A40cc;
     --light1: #DAD7CD;
     --light2: #A3B18A;
     --light3: #588157;
@@ -10,3 +16,32 @@
     --black: #111;
     --white: #fff;
 }
+
+/* :root{
+    --translucent: #8e8e8e22;
+    --translucent2: #34374ecc;
+    --light1: #DBDFFD;
+    --light2: #9BA3EB;
+    --light3: #646FD4;
+    --light4: #1b6bff;
+    --dark1: #242F9B;
+    --dark2: #34374e;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+} */
+
+
+/* :root{
+    --translucent: #8e8e8e22;
+    --translucent2: #4e4934cc;
+    --light1: #FDEEDC;
+    --light2: #FFD8A9;
+    --light3: #F1A661;
+    --light4: #ffa144;
+    --dark1: #E38B29;
+    --dark2: #4e4934;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+} */
