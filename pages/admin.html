@@ -1,3 +1,662 @@
-<div>
-    Admin body
+<style>
+  .admin_page {
+    width: 100%;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .headingc {
+    width: 100%;
+    background-image: url("../media/4.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .heading_background {
+    backdrop-filter: blur(4px);
+    background-color: var(--translucent2);
+  }
+  .heading_background h1 {
+    animation: scale 1s ease-in-out;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .tags span {
+    border: 2px solid var(--light2);
+    padding: 10px 20px;
+    margin: 10px 10px;
+    cursor: pointer;
+  }
+
+  .tags span:hover {
+    border: 2px solid var(--light4);
+    animation: scale 1s ease-in-out;
+    color: var(--light4);
+  }
+
+  .tags .selected {
+    border: 2px solid var(--light4);
+    background-color: var(--light4);
+    color: var(--black) !important;
+  }
+  .backimg {
+    position: absolute;
+    margin: 0px 100px;
+    border: 1px solid red;
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light4);
+    color: var(--light1);
+    margin-top: auto;
+    padding: 20px;
+  }
+
+  .people a {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .info a {
+    color: var(--work);
+    text-decoration: none;
+  }
+
+  .twoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .people {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    filter: drop-shadow(0px 4px 4px rgba(54, 54, 54, 0.25));
+    justify-content: space-evenly;
+    border-radius: 0px 16px 0px 16px;
+    overflow: hidden;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 340px;
+  }
+
+  .people:hover {
+    box-shadow: 0px 0px 18px rgba(75, 255, 75, 0.25);
+    transition: all 0.5s;
+  }
+
+  .image {
+    max-height: 180px !important;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+  }
+
+  .image img {
+    width: auto;
+    height: 150px;
+    /* max-height: 150px !important; */
+  }
+
+  .position {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--light4);
+    color: var(--white);
+    letter-spacing: 0.1em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--light4);
+    margin: 5px;
+  }
+
+  .pos {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--light4);
+    margin: 5px;
+  }
+
+  .deptt {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 5px;
+  }
+
+  .people_group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    object-fit: cover;
+  }
+  #warden {
+    display: flex;
+  }
+
+  .admins {
+    margin: 20px;
+  }
+  #prefect,
+  #fwarden, #fprefect , #ostaff, #webadmin{
+    display: none;
+  }
+
+  .admins {
+    animation: fade 0.5s ease-in-out 1 alternate-reverse;
+  }
+
+  #webadmin .image{
+    margin: 10px !important;
+    width: 100% !important;
+  }
+
+  #webadmin .image img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
+
+</style>
+
+<div class="admin_page">
+  <div class="headingc">
+    <div class="heading_background">
+      <h1 class="heading">Administration of Transit Men's Hostel</h1>
+      <div class="tags">
+        <span class="selected" onclick='show_admin("warden")' id="warden_span"
+          >Warden</span
+        >
+        <span onclick='show_admin("fwarden")' id="fwarden_span"
+          >Former Warden</span
+        >
+        <span onclick='show_admin("prefect")' id="prefect_span"
+          >Prefect(s)</span
+        >
+        <span onclick='show_admin("fprefect")' id="fprefect_span"
+          >Former Prefect(s)</span
+        >
+        <span onclick='show_admin("ostaff")' id="ostaff_span"
+          >Office Staff</span
+        >
+        <span onclick='show_admin("webadmin")' id="webadmin_span"
+          >Web Admin</span
+        >
+      </div>
+    </div>
+  </div>
+  <div id="warden" class="admins">
+    <div class="people_group">
+      <div class="people">
+        <div class="position">Senior Warden</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/swarden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dmaths/people/faculty-pages/rh2018.pdf"
+                >Proff. Rajib Haloi</a
+              ></span
+            >
+            <span class="pos">Professor.</span>
+            <span class="deptt"
+              >Dept of Applied Sciences , Tezpur University</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: +91-03712-27-5511</span>
+          <span
+            >E-mail:
+            <a href="mailto:rhaloi@tezu.ernet.in">rhaloi@tezu.ernet.in</a></span
+          >
+        </div>
+      </div>
+
+      <div class="people" style="transform: scaley(0.9)">
+        <div class="position">WARDEN</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fwarden" class="admins">
+    <div class="people">
+      <div class="position">ASSOCIATE WARDEN</div>
+      <div class="twoSection">
+        <div class="image">
+          <image
+            objectFit="contain"
+            src="../media/people/fwarden.jpg"
+            alt="name"
+          />
+        </div>
+        <div class="details">
+          <span class="name"
+            ><a href="https://tezu.irins.org/profile/116582"
+              >Dr Rajesh Kalarivayil</a
+            ></span
+          >
+          <span class="pos">Professor.</span>
+          <span class="deptt"
+            >Department of Social Work, Tezpur University</span
+          >
+        </div>
+      </div>
+      <div class="info">
+        <span>Phone: 03712-27-5839</span>
+        <span
+          >E-mail:
+          <a href="mailto:rajeshk@tezu.ernet.in">rajeshk@tezu.ernet.in</a></span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div id="prefect" class="admins">
+
+    <div class="people_group">
+
+      <div class="people">
+        <div class="position">Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/swarden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dmaths/people/faculty-pages/rh2018.pdf"
+                >Proff. Rajib Haloi</a
+              ></span
+            >
+            <span class="pos">Professor.</span>
+            <span class="deptt"
+              >Dept of Applied Sciences , Tezpur University</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: +91-03712-27-5511</span>
+          <span
+            >E-mail:
+            <a href="mailto:rhaloi@tezu.ernet.in">rhaloi@tezu.ernet.in</a></span
+          >
+        </div>
+      </div>
+      <div class="people">
+        <div class="position">Assistant Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="people">
+        <div class="position">Assistant Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="people">
+        <div class="position">Assistant Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="fprefect" class="admins">
+
+    <div class="people_group">
+
+      <div class="people">
+        <div class="position">Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/swarden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dmaths/people/faculty-pages/rh2018.pdf"
+                >Proff. Rajib Haloi</a
+              ></span
+            >
+            <span class="pos">Professor.</span>
+            <span class="deptt"
+              >Dept of Applied Sciences , Tezpur University</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: +91-03712-27-5511</span>
+          <span
+            >E-mail:
+            <a href="mailto:rhaloi@tezu.ernet.in">rhaloi@tezu.ernet.in</a></span
+          >
+        </div>
+      </div>
+      <div class="people">
+        <div class="position">Assistant Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="people">
+        <div class="position">Assistant Prefect</div>
+        <div class="twoSection">
+          <div class="image">
+            <image
+              objectFit="contain"
+              src="../media/people/warden.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="details">
+            <span class="name"
+              ><a
+                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+                >Dr Nishant Rachayya Swami Hulle</a
+              ></span
+            >
+            <span class="pos">Assistant Professor.</span>
+            <span class="deptt"
+              >Department of Food Engineering & Technology , Tezpur
+              University.</span
+            >
+          </div>
+        </div>
+        <div class="info">
+          <span>Phone: 03712-27-5715</span>
+          <span
+            >E-mail:
+            <a href="mailto:nishnat@tezu.ernet.in"
+              >nishnat@tezu.ernet.in</a
+            ></span
+          >
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="ostaff" class="admins">
+
+    <div class="people">
+      <div class="position">Assistant Prefect</div>
+      <div class="twoSection">
+        <div class="image">
+          <image
+            objectFit="contain"
+            src="../media/people/warden.jpg"
+            alt="name"
+          />
+        </div>
+        <div class="details">
+          <span class="name"
+            ><a
+              href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
+              >Dr Nishant Rachayya Swami Hulle</a
+            ></span
+          >
+          <span class="pos">Assistant Professor.</span>
+          <span class="deptt"
+            >Department of Food Engineering & Technology , Tezpur
+            University.</span
+          >
+        </div>
+      </div>
+      <div class="info">
+        <span>Phone: 03712-27-5715</span>
+        <span
+          >E-mail:
+          <a href="mailto:nishnat@tezu.ernet.in"
+            >nishnat@tezu.ernet.in</a
+          ></span
+        >
+      </div>
+    </div>
+
+  </div>
+
+  <div id="webadmin" class="admins">
+
+    <div class="people">
+      <div class="position">Web Admin</div>
+      <div class="twoSection">
+        <div class="image">
+          <image
+            objectFit="cover"
+            src="../media/people/webadmin.jpg"
+            alt="name"
+          />
+        </div>
+        <div class="details">
+          <span class="name"
+            ><a
+              href="https://divyanshu-kunwar.vercel.app/"
+              >Divyanshu Kunwar</a
+            ></span
+          >
+          <span class="pos">Student.</span>
+          <span class="deptt"
+            >Department of Computer Science Engineering, Tezpur
+            University.</span
+          >
+        </div>
+      </div>
+      <div class="info">
+        <span
+          >
+          <a href="https://divyanshu-kunwar.vercel.app/"
+            >Website</a
+          ></span
+        >
+      </div>
+    </div>
+
+  </div>
 </div>

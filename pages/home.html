@@ -1,3 +1,434 @@
-<div>
-    Home
+<style>
+  @media only screen and (max-width: 500px) {
+    #hero_image {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  #home_page {
+    width: 100%;
+    font-family: Poppins;
+  }
+
+  #hero_image {
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-image: url("../media/4.jpeg");
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+
+  .hero_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero_text_container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: calc(100vh - 72px);
+    z-index: 2;
+    background-color: var(--translucent2);
+    backdrop-filter: blur(2px);
+    font-size: 24px;
+    overflow: hidden;
+  }
+  .content_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: auto;
+  }
+  #hero_animation {
+    transform: scale(6);
+  }
+
+  #logo_container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #logo_container img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.headSection{
+    /* border-bottom: 1px dotted black; */
+}
+
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutText1{ 
+    align-items: center;   
+    background-color: #111F2C;
+    padding: 20px 50px;
+    background-image: url('../media/tmhshadow.png');
+    background-position: center center;
+}
+
+.aboutText1:hover , .aboutText2:hover{
+    animation: flash 0.5s ease infinite alternate;
+    transform: scale(1.05);
+}
+.aboutText2{
+    margin-top: 60px;
+    margin-left: -50px;
+    background-color: var(--light4);
+    padding: 20px;
+    background-image: url('../media/tmhshadow.png');
+    background-position: right bottom;
+}
+
+.aboutText1 , .aboutText2{
+    width: 500px;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    cursor: default;
+    transition: all 0.5s ease;
+
+}
+
+.cardSubHead{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: -10px;
+    letter-spacing: 0.075em;
+}
+
+.rightText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.cardHead{
+    color: var(--light4);
+}
+.cardHead2{
+    color: #111F2C;
+}
+.cardHead , .cardHead2{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.075em;
+}
+
+.cardtext{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cardtext1{
+    color: var(--white);
+}
+
+.cardtext2{
+    color: #ffffff77;
+}
+
+.topAreaCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    margin: 60px 0px 60px 0px;
+}
+
+.featureContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.featureContainer div{
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100px;
+    background-position: right bottom;
+    cursor: default;
+}
+
+.featureContainer div:hover{
+    animation: scale 1s ease infinite alternate;
+}
+.featureContainer div:hover > h1{
+    animation: scale 1s ease-in-out infinite alternate;
+}
+.featureContainer > div > h1{
+    font-size: 40px;
+    font-family: Poppins;
+    letter-spacing: 0.2em;
+}
+.featureContainer > div > h2{
+    font-size: 30px;
+    font-family: Poppins;
+    letter-spacing: 0.1em;
+    color: #ffffff77;
+}
+#card2 h2{
+    color: var(--white);
+}
+#card1{
+    background-color: var(--light4);
+    color: #111F2C;
+    background-image: url('../media/router.png');
+}
+
+#card2{
+    background-color: #111F2C;
+    transform: scale(1.1);
+    color: var(--light4);
+    background-image: url('../media/student.png');
+
+}
+
+#card3{
+    background-color: var(--light4);
+    color: #111F2C;
+    background-image: url('../media/illuclean.png');
+}
+.Facilities{
+    margin-top: 100px !important;
+}
+.galleryview{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--black);
+    flex-wrap: wrap;
+}
+.one-sixth{
+    width: 31%;
+    height: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.one-sixth img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.one-sixth:hover{
+    animation: scale 1s ease infinite;
+}
+
+.gallery_home{
+    height: 100%;
+    background-color: var(--black);
+}
+
+.one-sixth h5{
+    position: absolute;
+    height: auto;
+    padding: 0px 5px;
+    max-width: 50%;
+    z-index: 2;
+    background-color: #00000055;
+    color: var(--light2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: none;
+}
+
+.one-sixth:hover > h5{
+    display: block;
+}
+#welcome_txt , #estd_txt{
+    animation: scale 0.2s ease 1 alternate;
+}
+
+
+</style>
+
+<div id="home_page">
+  <div class="hero_container">
+    <div id="hero_text_container">
+      <div id="logo_container">
+        <img id="logo_image_1" src="../media/icon_tr.png"/>
+        <img id="logo_image_2" src="../media/tezu_icon.png"/>
+      </div>
+      <h1 id="welcome_txt">Welcome To Official Website Of</h1>
+      <lottie-player
+        id="hero_animation"
+        src="../media/animation.json"
+        background="transparent"
+        speed="6"
+        style="width: 300px; height: 300px"
+        autoplay
+        
+      ></lottie-player>
+      <h1 id="estd_txt">ESTD 2016</h1>
+    </div>
+    <div id="hero_image"></div>
+  </div>
+  <div class="content_home">
+    
+
+                <h1 class="heading">~ About Us ~</h1>
+
+                <div class="aboutContainer">
+                    <div class="aboutText1">
+                        <span class="cardHead">Transit</span>
+                        <span class="cardSubHead">Men&apos;s Hostel</span>
+                        <div class="cardtext">
+                        <span class="cardtext1">was </span>
+                        <span class="cardtext2">
+                            started from 2016 July.
+                            In the hostel we participate in Inter-hostel competitions
+                            such as the cricket, Football , Choir competition , and many more.
+                        </span>
+                        </div> 
+                    </div>
+                    <div class="aboutText2">
+                        <div class="topAreaCard">
+                        <Image src="../media/tezu_icon.png" alt="" width="80" objectFit='contain'/>
+
+                        <div class="rightText">
+                        <span class="cardHead2">Transit </span>
+                        <span class="cardSubHead">Men&apos;s Hostel</span>
+                        </div>
+
+                        </div>
+                        <div class="cardtext12">
+                        <span class="cardtext12">Tezpur University ,</span>
+                        <span class="cardtext22">
+                            Nappam<br/>
+                            PO: Tezpur District: Sonitpur,<br/>
+                            Assam, INDIA<br/>
+                            Pincode: 784028
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="Facilities heading">~ Gallery ~</h1>
+                <div class="galleryHome">
+                    <div class="galleryview"> 
+                        <div class="one-sixth">
+                            <img src="../media/16.jpeg" style="aspect-ratio: 2/3;"/>
+                            <h5>Hostel Building As Viewed From HSS Dept. Road</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/10.jpeg" style="aspect-ratio: 2/3;"/>
+                            <h5>Outside Scenic view as seen from Hostel Room</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/12.jpeg" style="aspect-ratio: 2/3;"/>
+                            <h5>TMH Hostel Building Sorrounded By Flora</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/18.jpeg" style="aspect-ratio: 5/3;"/>
+                            <h5>Night View</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/1.jpg" style="aspect-ratio: 5/3;"/>
+                            <h5>Main Entrance Of TMH</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/2.jpg" style="aspect-ratio: 5/3;"/>
+                            <h5>Spring Season</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/3.jpeg" style="aspect-ratio: 4/3.5;"/>
+                            <h5>Night View As Seen From Hostel Room</h5>
+                        </div>
+                        <div class="one-sixth">
+                            <img src="../media/15.jpeg" style="aspect-ratio: 4/3.5;"/>
+                            <h5>TMH</h5>
+                        </div>
+                        <div class="one-sixth" onclick=navigateGallery()>
+                            <img src="../media/14.jpeg" style="aspect-ratio: 4/3.5;"/>
+                            <h5>
+                                Click here For More <br/>
+                                Photos Of Events and Festivals Celebrated In TMH
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="Facilities heading">~ Facilities ~</h1>
+
+                <div class="featureContainer">
+                    <div id="card1">
+                        <h1>24X7</h1>
+                        <h2>Wifi</h2>
+                    </div>
+                    <div id="card2">
+                        <h1>80+</h1>
+                        <h2>Boarders</h2>
+                    </div>
+                    <div id="card3">
+                        <h1>Beautiful</h1>
+                        <h2>& Clean</h2>
+                    </div>
+
+                </div>
+
+
+
+
+  </div>
 </div>

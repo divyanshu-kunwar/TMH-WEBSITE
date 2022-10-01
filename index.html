@@ -6,13 +6,17 @@
     <link href="./media/icon.png" rel="icon"/>
     
     <link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
-    <link rel="stylesheet" href="./css/default.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./index.css">
 
     <title>Home - Transit Men's Hostel</title>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="components/links.js"></script>
+    <script src="script/home.js"></script>
+    <script src="script/image.js"></script>
 </head>
 <body>
     <Header></Header>
@@ -21,5 +25,19 @@
         <div id="LinksContainer"></div>
     </div>
     <Footer></Footer>
+
+    <div id="gallery_preview" class="gallery_preview">
+        <img
+          class="close_ico"
+          src="../media/close.svg"
+          alt="close"
+          onclick="closePopOut()"
+        />
+        <img id="inner_image" src="" />
+        <h4 id="gallery_preview_text">Gallery Photo -</h4>
+        <div id="thumb_container">
+        </div>
+      </div>
+      
 </body>
 </html>

@@ -1,3 +1,103 @@
-<div>
-    Contact
+<style>
+  .boarder_page {
+    width: 100%;
+    font-family: Poppins;
+  }
+  .heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .headingc {
+    width: 100%;
+    background-image: url("../media/4.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .heading_background {
+    animation: scale 1s ease-in-out;
+    backdrop-filter: blur(4px);
+    background-color: var(--translucent2);
+  }
+
+  .card_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+  .add_card{
+    width: 600px;
+    height: auto;
+    margin: 50px;
+    padding: 50px;
+    border: 1px solid var(--light4);
+    color: var(--black);
+  }
+
+  .add_card h3{
+    color: var(--light4);
+  }
+
+  .add_card h2{
+    color: var(--black);
+  }
+
+  .location{
+    background-image: url('../media/map.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+.phone{
+    background-image: url('../media/phone.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 200px;
+  }
+
+
+</style>
+<div class="boarder_page">
+  <div class="headingc">
+    <div class="heading_background">
+      <h1 class="heading">Reach Out To Us<br /></h1>
+    </div>
+  </div>
+
+  <div class="card_container"> 
+  <div class="add_card location">
+    <h2>ADDRESS</h2>
+    <h3>Transit Men's Hostel</h3><br/>
+    <p>
+      Tezpur University, Napaam, <br/>
+      PO: Tezpur District: Sonitpur, Assam, INDIA <br/>
+      Pincode: 784028
+    </p>
+  </div>
+
+  <div class="add_card phone">
+    <h2>Phone No</h2>
+    <h3>Transit Men's Hostel</h3><br/>
+    <p>
+      Senior Warden TMH -
+      Prof. Rajib Haloi <br/>
+      Phone : +91 6027-xxx-xxxx <br/><br/>
+      Warden TMH  -
+      Dr. Nishant Rachayya Swami Hulle<br/>
+      Phone : +91 800-xxxx-xxxx
+    </p>
+  </div>
+</div>
+
 </div>

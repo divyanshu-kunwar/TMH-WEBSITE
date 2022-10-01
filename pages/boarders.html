@@ -1,3 +1,99 @@
-<div>
-    Boarders
+<style>
+    .boarder_page{
+            width: 100%;
+            font-family: Poppins;
+    }
+    .heading{
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .headingc{
+        width: 100%;
+        background-image: url('../media/4.jpeg'); 
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: var(--white);
+        overflow: hidden;
+    }
+    .heading_background{
+        animation: scale 1s ease-in-out;
+        backdrop-filter: blur(4px);
+        background-color: var(--translucent2);
+    }
+    .table_div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+    .table_div table{
+        width: 80%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table_div table thead tr{
+        background-color: var(--light4);
+        color: var(--light1);
+        font-weight: bold;
+        height: 50px;
+    }
+
+    .table_div table tbody tr td{
+        height: 40px;
+        border: 1px solid var(--light2) outset;
+        text-align: center;
+    }
+
+    .table_div table tbody tr:hover{
+        color: var(--light4);
+        cursor: default;
+    }
+
+    .table_div table tbody tr:nth-child(even){
+        background-color: var(--translucent);
+    }
+
+    #fetching_status , #last_updated{
+        width: 75%;
+        text-align: right;
+        margin: 0px 0px 20px 0px;
+        color: var(--gray);
+    }
+
+
+    
+    </style>
+    <div class="boarder_page">
+        <div class="headingc">
+        <div class="heading_background">
+        <h1 class="heading">Boarders</h1>
+    </div>
+</div> 
+<div class="table_div"> 
+    <h5 id="fetching_status">Fetching Data ... </h5>
+    <h5 id="last_updated"></h5>
+    <table id="BoardersTable">
+        <thead>
+            <th>Sr. No.</th>
+            <th>Room No</th>
+            <th>Name</th>
+            <th>Roll No</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </div>
+    
+    </div>

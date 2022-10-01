@@ -20,8 +20,11 @@ window.addEventListener("DOMContentLoaded", () => {
   .then(function (out) {
     content = out
     for (const key in navigations) {
-      links += `<span class="header_link" id="link_${key.slice(0,4)}"><a onclick=rendernewPage("${key.split(" ")[0]}","${navigations[key]}","link_${key.slice(0,4)}")>${key}</a></span>`
+      links += `<span class="header_link" id="link_${key.slice(0,4)}">
+                  <a onclick=rendernewPage("${key.split(" ")[0]}","${navigations[key]}","link_${key.slice(0,4)}")>${key}</a>
+                </span>`
     }
+
     document.querySelector("header").innerHTML = content
     document.getElementById("header_linksContainer").innerHTML += links
     document.getElementById("header_title").innerHTML = title
@@ -44,12 +47,27 @@ function rendernewPage(key,page , link_id){
         return response.text()
         })
         .then(function (out) {
-            document.querySelector("Main").innerHTML = out
+            document.querySelector("#Scrollable").removeChild(document.querySelector("main"));
+            let newPage = document.createElement("main")
+            newPage.innerHTML = out
+            document.querySelector("#Scrollable").prepend(newPage);
             colorLink(link_id)
             document.title = key + "-TMH"
             toggle_sidebar()
+
+            if(key == "Home"){
+              homeLoaded()
+            }
+            if(key == "Boarders"){
+                getBoarders()
+            }
+            if(key == "Gallery"){
+                getGallery()
+                getPopOutThumb()
+            }
         })
 }
+
 
 function colorLink(link_id){
     let links = document.querySelectorAll(".header_link a")

@@ -1,3 +1,93 @@
-<div>
-    Gallery
+<style>
+  .boarder_page {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+  }
+  .heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .headingc {
+    width: 100%;
+    background-image: url("../media/4.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    overflow: hidden;
+  }
+  .heading_background {
+    backdrop-filter: blur(4px);
+    background-color: var(--translucent2);
+    animation: scale 1s ease-in-out;
+  }
+
+  .galleryview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: initial;
+    width: 100%;
+    /* background-color: var(--black); */
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .one-fifth {
+    width: 18%;
+    height: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-evenly;
+  }
+  .one-fifth img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .one-fifth:hover {
+    animation: scale 1s ease infinite;
+  }
+
+  .gallery_home {
+    height: 100%;
+  }
+
+  .one-fifth h5 {
+    height: auto;
+    padding: 0px 5px;
+    width: 95%;
+    z-index: 2;
+    color: var(--light3);
+    text-align: center;
+    display: block;
+  }
+
+</style>
+<div class="boarder_page">
+  <div class="headingc">
+    <div class="heading_background">
+      <h1 class="heading">Photo Gallery</h1>
+    </div>
+  </div>
+  <div class="galleryHome">
+    <div id="galleryview" class="galleryview">
+    </div>
+  </div>
 </div>

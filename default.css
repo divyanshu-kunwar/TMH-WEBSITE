@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../media/Poppin.ttf');
+}
+@font-face {
+    font-family: 'Nautigal';
+    src: url('../media/Poppin.ttf');
+}
+@keyframes scale{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes flash {
+    0%{
+        filter: drop-shadow(0px 4px 8px rgba(47, 109, 103, 0.2));
+    }
+    50%{
+        filter: drop-shadow(0px 4px 8px rgba(47, 109, 103, 0.4));
+    }
+    100%{
+        filter: drop-shadow(0px 4px 8px rgba(47, 109, 103, 0.2));
+    }
+}
+
+:root{
+    --translucent: #8e8e8e22;
+    --translucent2: #3A5A40cc;
+    --light1: #DAD7CD;
+    --light2: #A3B18A;
+    --light3: #588157;
+    --light4: #308D46;
+    --dark1: #3A5A40;
+    --dark2: #344E41;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+    --translucent3: #3A5A4044;
+}
+
+/* :root{
+    --translucent: #8e8e8e22;
+    --translucent2: #34374ecc;
+    --light1: #DBDFFD;
+    --light2: #9BA3EB;
+    --light3: #646FD4;
+    --light4: #1b6bff;
+    --dark1: #242F9B;
+    --dark2: #34374e;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+} */
+
+/* :root{
+    --translucent: #8e8e8e22;
+    --translucent2: #1d3437cc;
+    --light1: #e2fcff;
+    --light2: #9ac4ca;
+    --light3: #87bfc7;
+    --light4: #578d95;
+    --dark1: #274e54;
+    --dark2: #1d3437;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+} */
+
+/* :root{
+    --translucent: #8e8e8e22;
+    --translucent2: #4e4934cc;
+    --light1: #FDEEDC;
+    --light2: #FFD8A9;
+    --light3: #F1A661;
+    --light4: #ffa144;
+    --dark1: #E38B29;
+    --dark2: #4e4934;
+    --gray: #3e3e3e;
+    --black: #111;
+    --white: #fff;
+} */
