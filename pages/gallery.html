@@ -1,4 +1,22 @@
 <style>
+
+@media only screen and (max-width: 768px) {
+    .heading{
+        font-size: 30px !important;
+    }
+    .one-fifth{
+      width: 40% !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .heading{
+        font-size: 25px !important;
+    }
+    .one-fifth{
+      width: 99% !important;
+    }
+}
+
   .boarder_page {
     width: 100%;
     min-height: 100vh;
@@ -58,7 +76,7 @@
     height: auto;
     object-fit: cover;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .one-fifth:hover {
@@ -71,7 +89,7 @@
 
   .one-fifth h5 {
     height: auto;
-    padding: 0px 5px;
+    padding: 10px 5px;
     width: 95%;
     z-index: 2;
     color: var(--light3);

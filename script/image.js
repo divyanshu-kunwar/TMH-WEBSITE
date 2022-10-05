@@ -44,6 +44,37 @@ const Imagedata = {
         src:"../media/15.jpeg",
         aspectRatio:'2/3'
     },
+    10:{
+        caption:"Janamashtami Celebration",
+        src:"../media/5.jpeg",
+        aspectRatio:'2/3'
+    },
+    11:{
+        caption:"Janamashtami Celebration",
+        src:"../media/9.jpeg",
+        aspectRatio:'5/3'
+    },
+    12:{
+        caption:"Hostel March Platoon 2020",
+        src:"../media/19.jpg",
+        aspectRatio:'5/3'
+    },
+    13:{
+        caption:"TMH Kabaddi Team 2020",
+        src:"../media/20.jpg",
+        aspectRatio:'5/3'
+    },
+    14:{
+        caption:"Republic Day Cycle Rally by TMH 2020",
+        src:"../media/21.jpeg",
+        aspectRatio:'5/3'
+    },
+    15:{
+        caption:"Bihu Team TMH 2019",
+        src:"../media/22.jpg",
+        aspectRatio:'5/3'
+    },
+
 }
 
 function getGallery(){

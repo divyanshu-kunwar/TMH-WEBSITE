@@ -1,4 +1,15 @@
 <style>
+  
+  @media screen and (max-width: 500px) {
+    .people{
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .heading{
+      font-size: 30px !important;
+    }
+  }
+
   .admin_page {
     width: 100%;
     font-family: Poppins;
@@ -7,6 +18,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .heading {
     text-align: center;
     font-size: 40px;
@@ -26,13 +38,16 @@
     color: var(--white);
     overflow: hidden;
   }
+
   .heading_background {
     backdrop-filter: blur(4px);
     background-color: var(--translucent2);
   }
+
   .heading_background h1 {
     animation: scale 1s ease-in-out;
   }
+
   .tags {
     display: flex;
     flex-direction: row;
@@ -40,6 +55,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
   .tags span {
     border: 2px solid var(--light2);
     padding: 10px 20px;
@@ -58,6 +74,7 @@
     background-color: var(--light4);
     color: var(--black) !important;
   }
+
   .backimg {
     position: absolute;
     margin: 0px 100px;
@@ -97,7 +114,7 @@
     background-color: var(--white);
     filter: drop-shadow(0px 4px 4px rgba(54, 54, 54, 0.25));
     justify-content: space-evenly;
-    border-radius: 0px 16px 0px 16px;
+    border-radius: 4px 8px 4px 8px;
     overflow: hidden;
     margin-left: 50px;
     margin-top: 50px;
@@ -176,6 +193,7 @@
     flex-wrap: wrap;
     object-fit: cover;
   }
+
   #warden {
     display: flex;
   }
@@ -183,8 +201,12 @@
   .admins {
     margin: 20px;
   }
+
   #prefect,
-  #fwarden, #fprefect , #ostaff, #webadmin{
+  #fwarden,
+  #fprefect,
+  #ostaff,
+  #webadmin {
     display: none;
   }
 
@@ -192,17 +214,16 @@
     animation: fade 0.5s ease-in-out 1 alternate-reverse;
   }
 
-  #webadmin .image{
+  #webadmin .image {
     margin: 10px !important;
     width: 100% !important;
   }
 
-  #webadmin .image img{
+  #webadmin .image img {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain;
   }
-
 </style>
 
 <div class="admin_page">
@@ -226,8 +247,9 @@
           >Office Staff</span
         >
         <span onclick='show_admin("webadmin")' id="webadmin_span"
-          >Web Admin</span
+          >Mess Convenor</span
         >
+      
       </div>
     </div>
   </div>
@@ -335,37 +357,28 @@
   </div>
 
   <div id="prefect" class="admins">
-
     <div class="people_group">
-
       <div class="people">
         <div class="position">Prefect</div>
         <div class="twoSection">
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/swarden.jpg"
+              src="../media/people/prefect.jpg"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dmaths/people/faculty-pages/rh2018.pdf"
-                >Proff. Rajib Haloi</a
-              ></span
-            >
-            <span class="pos">Professor.</span>
-            <span class="deptt"
-              >Dept of Applied Sciences , Tezpur University</span
-            >
+            <span class="name"><a>Ashirbaad Bhowmik</a></span>
+            <span class="pos">B.Ed. Student</span>
+            <span class="deptt">Dept of English, Tezpur University</span>
           </div>
         </div>
         <div class="info">
-          <span>Phone: +91-03712-27-5511</span>
+          <span>Phone: +91 9871161420</span>
           <span
             >E-mail:
-            <a href="mailto:rhaloi@tezu.ernet.in">rhaloi@tezu.ernet.in</a></span
+            <a href="mailto:edb21004@tezu.ac.in">edb21004@tezu.ac.in</a></span
           >
         </div>
       </div>
@@ -375,32 +388,19 @@
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/warden.jpg"
+              src="../media/people/aprefect.jpeg"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-                >Dr Nishant Rachayya Swami Hulle</a
-              ></span
-            >
-            <span class="pos">Assistant Professor.</span>
-            <span class="deptt"
-              >Department of Food Engineering & Technology , Tezpur
-              University.</span
-            >
+            <span class="name"><a> Utkarsh Vedantu Sahu</a></span>
+            <span class="pos">MA Linguistics Student</span>
+            <span class="deptt"> Deptt Of English , Tezpur University.</span>
           </div>
         </div>
         <div class="info">
-          <span>Phone: 03712-27-5715</span>
-          <span
-            >E-mail:
-            <a href="mailto:nishnat@tezu.ernet.in"
-              >nishnat@tezu.ernet.in</a
-            ></span
-          >
+          <span>Phone: +91 8249336339 </span>
+          <!-- <span>E-mail: <a href="mailto:__">_________</a></span> -->
         </div>
       </div>
       <div class="people">
@@ -409,254 +409,149 @@
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/warden.jpg"
+              src="../media/people/aprefect.jpeg"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-                >Dr Nishant Rachayya Swami Hulle</a
-              ></span
-            >
-            <span class="pos">Assistant Professor.</span>
-            <span class="deptt"
-              >Department of Food Engineering & Technology , Tezpur
-              University.</span
-            >
+            <span class="name"><a> Kaushik </a></span>
+            <span class="pos">MBA Student</span>
+            <span class="deptt"> School Of Management , Tezpur University.</span>
           </div>
         </div>
         <div class="info">
-          <span>Phone: 03712-27-5715</span>
-          <span
-            >E-mail:
-            <a href="mailto:nishnat@tezu.ernet.in"
-              >nishnat@tezu.ernet.in</a
-            ></span
-          >
+          <!-- <span>Phone: __________ </span>
+          <span>E-mail: <a href="mailto:__">_________</a></span> -->
         </div>
       </div>
-      <div class="people">
-        <div class="position">Assistant Prefect</div>
-        <div class="twoSection">
-          <div class="image">
-            <image
-              objectFit="contain"
-              src="../media/people/warden.jpg"
-              alt="name"
-            />
-          </div>
-          <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-                >Dr Nishant Rachayya Swami Hulle</a
-              ></span
-            >
-            <span class="pos">Assistant Professor.</span>
-            <span class="deptt"
-              >Department of Food Engineering & Technology , Tezpur
-              University.</span
-            >
-          </div>
-        </div>
-        <div class="info">
-          <span>Phone: 03712-27-5715</span>
-          <span
-            >E-mail:
-            <a href="mailto:nishnat@tezu.ernet.in"
-              >nishnat@tezu.ernet.in</a
-            ></span
-          >
-        </div>
-      </div>
-
     </div>
   </div>
 
   <div id="fprefect" class="admins">
-
     <div class="people_group">
-
       <div class="people">
-        <div class="position">Prefect</div>
+        <div class="position">Former Prefect</div>
         <div class="twoSection">
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/swarden.jpg"
+              src="../media/people/fprefect.png"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dmaths/people/faculty-pages/rh2018.pdf"
-                >Proff. Rajib Haloi</a
-              ></span
-            >
-            <span class="pos">Professor.</span>
+            <span class="name"><a>Dishant Adhikari</a></span>
+            <span class="pos">MTTM Student</span>
             <span class="deptt"
-              >Dept of Applied Sciences , Tezpur University</span
+              >Department of Business Administration, Tezpur University</span
             >
           </div>
         </div>
         <div class="info">
-          <span>Phone: +91-03712-27-5511</span>
-          <span
-            >E-mail:
-            <a href="mailto:rhaloi@tezu.ernet.in">rhaloi@tezu.ernet.in</a></span
-          >
+          <span>Served From (___ - ____)</span>
         </div>
       </div>
       <div class="people">
-        <div class="position">Assistant Prefect</div>
+        <div class="position">Former Prefect</div>
         <div class="twoSection">
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/warden.jpg"
+              src="../media/people/fprefect2.jpeg"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-                >Dr Nishant Rachayya Swami Hulle</a
-              ></span
-            >
-            <span class="pos">Assistant Professor.</span>
+            <span class="name"><a>Sounoq Raj Phukon</a></span>
+            <span class="pos">B.Tech. Student</span>
             <span class="deptt"
-              >Department of Food Engineering & Technology , Tezpur
-              University.</span
+              >Department of Food Engineering & Technology, Tezpur
+              University</span
             >
           </div>
         </div>
         <div class="info">
-          <span>Phone: 03712-27-5715</span>
-          <span
-            >E-mail:
-            <a href="mailto:nishnat@tezu.ernet.in"
-              >nishnat@tezu.ernet.in</a
-            ></span
-          >
+          <span>Served From (___ - 2021)</span>
         </div>
       </div>
       <div class="people">
-        <div class="position">Assistant Prefect</div>
+        <div class="position">Former Assistant Prefect</div>
         <div class="twoSection">
           <div class="image">
             <image
               objectFit="contain"
-              src="../media/people/warden.jpg"
+              src="../media/people/afprefect.jpeg"
               alt="name"
             />
           </div>
           <div class="details">
-            <span class="name"
-              ><a
-                href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-                >Dr Nishant Rachayya Swami Hulle</a
-              ></span
-            >
-            <span class="pos">Assistant Professor.</span>
+            <span class="name"><a>Nikunja Narayan Kumar</a></span>
+            <span class="pos">B.Tech. Student</span>
             <span class="deptt"
-              >Department of Food Engineering & Technology , Tezpur
-              University.</span
+              >Department of Mechanical Engineering, Tezpur University</span
             >
           </div>
         </div>
         <div class="info">
-          <span>Phone: 03712-27-5715</span>
-          <span
-            >E-mail:
-            <a href="mailto:nishnat@tezu.ernet.in"
-              >nishnat@tezu.ernet.in</a
-            ></span
-          >
+          <span>Served From (___ - 2021)</span>
         </div>
       </div>
-
     </div>
-
   </div>
 
   <div id="ostaff" class="admins">
-
     <div class="people">
-      <div class="position">Assistant Prefect</div>
+      <div class="position">Office Staff</div>
       <div class="twoSection">
         <div class="image">
           <image
             objectFit="contain"
-            src="../media/people/warden.jpg"
+            src="../media/people/Offstaff.jpg"
             alt="name"
           />
         </div>
         <div class="details">
-          <span class="name"
-            ><a
-              href="http://www.tezu.ernet.in/dfpt/people/faculty_homepage/Dr.%20Nishant%20Rachayya%20Swami%20Hulle_files/Nishant%20Swami_CV.pdf"
-              >Dr Nishant Rachayya Swami Hulle</a
-            ></span
-          >
-          <span class="pos">Assistant Professor.</span>
-          <span class="deptt"
-            >Department of Food Engineering & Technology , Tezpur
-            University.</span
-          >
+          <span class="name"><a>Mr Pradum Nath Ram</a></span>
+          <span class="deptt">Date Of Joining:10-01-2019 (till present)</span>
         </div>
       </div>
       <div class="info">
-        <span>Phone: 03712-27-5715</span>
+        <span>Phone: 03712-27-3316</span>
         <span
           >E-mail:
-          <a href="mailto:nishnat@tezu.ernet.in"
-            >nishnat@tezu.ernet.in</a
-          ></span
+          <a href="mailto:pradum8180@gmail.com">pradum8180@gmail.com</a></span
         >
       </div>
     </div>
-
   </div>
 
   <div id="webadmin" class="admins">
-
     <div class="people">
-      <div class="position">Web Admin</div>
+      <div class="position">Mess Convenor</div>
       <div class="twoSection">
         <div class="image">
           <image
             objectFit="cover"
-            src="../media/people/webadmin.jpg"
+            src="../media/people/....jpg"
             alt="name"
           />
         </div>
         <div class="details">
           <span class="name"
-            ><a
-              href="https://divyanshu-kunwar.vercel.app/"
-              >Divyanshu Kunwar</a
+            ><a href="____"
+              >Praduymna Raya Manjhi</a
             ></span
           >
-          <span class="pos">Student.</span>
+          <span class="pos">MSW Student</span>
           <span class="deptt"
-            >Department of Computer Science Engineering, Tezpur
-            University.</span
+            > Deptt Of Social Work </span
           >
         </div>
       </div>
       <div class="info">
-        <span
-          >
-          <a href="https://divyanshu-kunwar.vercel.app/"
-            >Website</a
-          ></span
-        >
+        <span> <a href="________">Phone : </a></span>
       </div>
     </div>
-
   </div>
+
 </div>

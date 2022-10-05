@@ -19,6 +19,9 @@
   #Scrollable {
     height: calc(100vh - 72px) !important;
   }
+  .heading{
+    font-size: 26px !important;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -30,6 +33,9 @@
   }
   Footer {
     height: 74px !important;
+  }
+  #Scrollable::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -45,7 +51,7 @@ Header {
   display: block;
   width: 100%;
   height: 40px;
-  z-index: 2;
+  z-index: 10;
 }
 
 Footer {

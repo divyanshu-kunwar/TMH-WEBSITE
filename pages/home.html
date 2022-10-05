@@ -1,8 +1,57 @@
 <style>
+
+  @media screen and (max-width: 1280px) {
+    #hero_animation{
+        transform: scale(4) !important;
+    }
+  }
+
+    @media screen and (max-width: 768px) {
+        #hero_animation{
+            transform: scale(2.5) !important;
+        }
+        #welcome_txt , #estd_txt{
+            font-size: 30px !important;
+        }
+        .aboutContainer{
+            flex-direction: column !important;
+            align-items: center;
+        }
+        .aboutText2{
+            margin-left: 0% !important;
+        }
+        .featureContainer{
+            flex-wrap: wrap-reverse;
+        }
+    }
+
   @media only screen and (max-width: 500px) {
     #hero_image {
       width: 100% !important;
-      height: auto !important;
+      height: 80vh !important;
+    }
+
+    #hero_animation{
+        transform: scale(2) !important;
+    }
+    #hero_text_container{
+        height: 80vh !important;
+    }
+    #logo_image_1 , #logo_image_2{
+        width: 40px !important;
+    }
+    .aboutText1 , .aboutText2{
+        width: 320px !important;
+        height: 360px !important;
+    }
+    .one-sixth{
+        width: 99% !important;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    #hero_animation{
+        transform: scale(1.5) !important;
     }
   }
 
@@ -35,7 +84,6 @@
     justify-content: space-evenly;
     width: 100%;
     height: calc(100vh - 72px);
-    z-index: 2;
     background-color: var(--translucent2);
     backdrop-filter: blur(2px);
     font-size: 24px;
@@ -71,15 +119,11 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
 }
 
 .headSection{
     /* border-bottom: 1px dotted black; */
-}
-
-.aboutContainer{
-    display: flex;
-    justify-content: center;
 }
 
 .aboutText1{ 
@@ -297,6 +341,7 @@
     display: block;
 }
 #welcome_txt , #estd_txt{
+    text-align: center;
     animation: scale 0.2s ease 1 alternate;
 }
 
@@ -424,11 +469,7 @@
                         <h1>Beautiful</h1>
                         <h2>& Clean</h2>
                     </div>
-
                 </div>
-
-
-
 
   </div>
 </div>
